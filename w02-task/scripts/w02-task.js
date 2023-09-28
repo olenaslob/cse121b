@@ -13,7 +13,7 @@ const currentYear = new Date().getFullYear();
 Identify the variable as "profilePicture".
 Example path: 'images/yourprofileimagename.png'
 The file path will be relative to the location of the HTML document and the name and type of image matches your own image.*/
-const profilePicture = "images/me.png";
+const profilePicture = "images/placeholder.png";
 
 /* Step 3 - Element Variables */
 /*3.1 Use the document.getElementById() method to get the HTML element with the id of name and store it in a const variable named "nameElement".
@@ -32,11 +32,13 @@ Do NOT edit the HTML markup in the HTML page.*/
 const imageElement = document.querySelector('[data-profile-image="yourAttributeValue"]');
 
 /* Step 4 - Adding Content */
-/* 4.1 Assign the nameElement's innerHTML property the fullName variable value.
-   4.2 Surround the fullName value with <strong> tags.
+/* 4.1 Assign the nameElement's innerHTML property the fullName variable value.*/
+nameElement.innerHTML = fullName;
+
+/*4.2 Surround the fullName value with <strong> tags.
 Use a template literal to create the string with HTML tags.
 Check Your Understanding: nameElement.innerHTML = `<strong>${fullName}</strong>`;*/
-nameElement.innerHTML = '<strong>${fullName}</strong>';
+nameElement.innerHTML = `<strong>${fullName}</strong>`;
 
 /* 4.3 Use the textContent property to set the value of the element to the value of the variable currentYear.*/
 yearElement.textContent = currentYear;
@@ -53,8 +55,32 @@ imageElement.setAttribute("alt", altText);
 
 /* Step 5 - Array */
 
+/*5.1 Declare an array variable to hold your favorite foods*/
+const favoriteFoods = ["Pizza", "Sushi", "Chocolate", "Burger"];
 
+/*5.2 Modify the HTML element with the id of food to display your favorite foods array. 💡Remember that you set a variable named foodElement 
+in Step 3 to reference the element with the id of food.*/
+foodElement.textContent = favoriteFoods.join(", ");
 
+/*5.3 Declare and instantiate a variable to hold another single favorite food item.*/
+const newFavoriteFood = "Icecream";
 
+/*5.4 Add the value stored in this new variable to your favorite food array.
+Hint: Use the array push() method to add the new item to the array.*/
+favoriteFoods.push(newFavoriteFood);
 
+/*5.5 Append the new array values onto the displayed content of the HTML element with the id of food using a += operator and a <br> (line break character) to provide a line break as shown in Figure 2.
+Check Your Understanding: foodElement.innerHTML += `<br>${favFoods}`;*/
+foodElement.innerHTML += '<br>${favFoods}';
 
+/*5.6 Remove the first element in the favorite food array.*/
+favoriteFoods.shift();
+
+/*5.7 Again, append the array output showing the modified array, using a line break as shown in step 5.5.*/
+foodElement.innerHTML += '<br>${favFoods}';
+
+/*5.8 Remove the last element in the favorite food array.*/
+favoriteFoods.pop();
+
+/*5.9 Append the array output with this final modified favorite foods array. Hint: Step 5.5.*/
+foodElement.innerHTML += '<br>${favFoods}';
