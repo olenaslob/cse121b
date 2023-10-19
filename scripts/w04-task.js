@@ -106,4 +106,3 @@ myProfile.placesLived.forEach(place => {
 /* Places Lived DataList */
 
 //>>>>>>> d5c822e72a35a05c02bb9bacaaee56f20fa47301
-
