@@ -29,11 +29,11 @@ const yearElement = document.querySelector('#year');
 
 /* 3.4 Use any viable method to get the profile image element stored into a variable named "imageElement".
 Do NOT edit the HTML markup in the HTML page.*/
-const imageElement = document.querySelector('[data-profile-image="yourAttributeValue"]');
+const imageElement = document.querySelector('#image');
 
 /* Step 4 - Adding Content */
 /* 4.1 Assign the nameElement's innerHTML property the fullName variable value.*/
-nameElement.innerHTML = fullName;
+//nameElement.innerHTML = fullName;
 
 /*4.2 Surround the fullName value with <strong> tags.
 Use a template literal to create the string with HTML tags.
@@ -60,7 +60,7 @@ const favoriteFoods = ["Pizza", "Sushi", "Chocolate", "Burger"];
 
 /*5.2 Modify the HTML element with the id of food to display your favorite foods array. 💡Remember that you set a variable named foodElement 
 in Step 3 to reference the element with the id of food.*/
-foodElement.textContent = favoriteFoods.join(", ");
+foodElement.textContent = favoriteFoods.join('<br>');
 
 /*5.3 Declare and instantiate a variable to hold another single favorite food item.*/
 const newFavoriteFood = "Icecream";
@@ -71,16 +71,16 @@ favoriteFoods.push(newFavoriteFood);
 
 /*5.5 Append the new array values onto the displayed content of the HTML element with the id of food using a += operator and a <br> (line break character) to provide a line break as shown in Figure 2.
 Check Your Understanding: foodElement.innerHTML += `<br>${favFoods}`;*/
-foodElement.innerHTML += '<br>${favFoods}';
+foodElement.innerHTML += `<br>${favoriteFoods.join('<br>')}`;
 
 /*5.6 Remove the first element in the favorite food array.*/
 favoriteFoods.shift();
 
 /*5.7 Again, append the array output showing the modified array, using a line break as shown in step 5.5.*/
-foodElement.innerHTML += '<br>${favFoods}';
+foodElement.innerHTML += '`<br>${favoriteFoods.join('<br>')}`;
 
 /*5.8 Remove the last element in the favorite food array.*/
 favoriteFoods.pop();
 
 /*5.9 Append the array output with this final modified favorite foods array. Hint: Step 5.5.*/
-foodElement.innerHTML += '<br>${favFoods}';
+foodElement.innerHTML += `<br>${favoriteFoods.join('<br>')}`;
