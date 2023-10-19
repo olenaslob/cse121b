@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+//<<<<<<< HEAD
 /* LESSON 4 - Programming Tasks */
 
 /* Profile Object  */
@@ -36,7 +36,7 @@ myProfile.placesLived.push(
   },
 
 );
-=======
+//=======
 /* LESSON 3 - Programming Tasks */
 
 /* Profile Object  */
@@ -48,12 +48,12 @@ myProfile.placesLived.push(
 
 
 
->>>>>>> d5c822e72a35a05c02bb9bacaaee56f20fa47301
+//>>>>>>> d5c822e72a35a05c02bb9bacaaee56f20fa47301
 
 /* DOM Manipulation - Output */
 
 /* Name */
-<<<<<<< HEAD
+//<<<<<<< HEAD
 // Assign the value of the name property to the HTML element with ID 'name'
 document.querySelector('#name').textContent = myProfile.name;
 
@@ -92,7 +92,7 @@ myProfile.placesLived.forEach(place => {
   dl.appendChild(dt);
   dl.appendChild(dd);
 });
-=======
+//=======
 
 /* Photo with attributes */
 
@@ -105,5 +105,5 @@ myProfile.placesLived.forEach(place => {
 
 /* Places Lived DataList */
 
->>>>>>> d5c822e72a35a05c02bb9bacaaee56f20fa47301
+//>>>>>>> d5c822e72a35a05c02bb9bacaaee56f20fa47301
 
