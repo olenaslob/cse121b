@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: rgb(255, 244, 244);
+        }
+        #wrapper{
+            width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #search{
+            width: 150px;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        #inputFilm{
+            margin-bottom: 10px;
+        }
+        #films{
+            padding: 20px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 1000px;
+            list-style-type: none;
+        }
+        .film{
+            padding: 10px;
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .film img{
+            margin-right: 10px;
+            width: 100px;
+            float: left;
+        }
+        .film input{
+            width: 225px;
+        }
+        .type{
+            color: gray;
+        }
+        .title{
+            font-weight: bold;
+            margin: 10px 0px 20px 0px;
+        }
+        .year{
+            margin-bottom: 10px;
+        }
+        #divPagination button{
+            padding: 5px;
+        
+        }
+        #divPagination{
+            margin: 0 auto;
+            width: 85px;
+            display: none;
+        }
+        #filmDetails{
+            padding: 10px;
+            width: 1000px;
+            margin: 0 auto;
+        }
+        #filmDetails label{
+            display: inline-block;
+            width: 150px;
+        }
+        #filmDetails img{
+            float: left;
+            margin-right: 10px;
+            width: 250px;
+        }
+        .info{
+            display: inline-block;
+        }
+        .point{
+            margin: 0px 0px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <form id="search">
+            <input id="inputFilm" type="text" placeholder="Film name">
+            <button id="searchButton">
+                Search
+            </button>
+        </form>
+        <ul id="films">
+        </ul>
+
+        <div id="divPagination">
+            <button onclick="prevClick()">prev</button>
+            <button onclick="nextClick()">next</button>
+        </div>
+        <div id="filmDetails">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
